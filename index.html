@@ -83,7 +83,7 @@
 h1{
     font-size: 2.5rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-shadow: 10px 15px 50px   black;
+   
 }
 
 
@@ -144,11 +144,14 @@ let min = document.getElementById("min");
 let sec = document.getElementById("sec");
 
 let time= new Date();
-if(time.getHours()<0 && time.getHours()<10){
-    hr.innerHTML="0"+time.getHours()+12
+if(time.getHours()<0 && time.getHours()>12){
+    hr.innerHTML="0"+time.getHours()-12
 }
 else{
-    hr.innerHTML=time.getHours()-12
+    hr.innerHTML=time.getHours();
+}
+if(time.getHours()<10){
+    hr.innerHTML="0"+time.getHours()
 }
 if(time.getMinutes()<10){
     min.innerHTML="0"+time.getMinutes();
