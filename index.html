@@ -145,10 +145,10 @@ let sec = document.getElementById("sec");
 
 let time= new Date();
 if(time.getHours()==0){
-    hr.innerHTML="0"+time.getHours()+12
+    hr.innerHTML=time.getHours()+12
 }
     else if(time.getHours()>12){
-        hr.innerHTML="0"+time.getHours()-12
+        hr.innerHTML=time.getHours()-12
     }
 else{
     hr.innerHTML=time.getHours();
